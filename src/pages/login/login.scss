@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+overflow: hidden;
     .card { display: flex;
         overflow: hidden;
         width: 50%;
@@ -14,6 +14,8 @@
         .left{
 
             background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://media.gettyimages.com/id/509646179/vector/people-jumping.jpg?s=1024x1024&w=gi&k=20&c=xeOO0zX1Xr56rUEQXTTvEuWShrHQSiz722e8d3-Svow=") center;
+            
+            background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://wealthtechtoday.com/wp-content/uploads/2013/03/excited-people-jumping-1024x711.jpg") center;
             background-size: cover;
             padding: 50px;
             flex: 1;

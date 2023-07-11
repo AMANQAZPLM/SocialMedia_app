@@ -55,7 +55,7 @@ export const RightBar = () => {
           <img src={user} alt="image of person"/>
         
           <div className="online" /> 
-           <div className="uname">   Jack Smith </div>
+           <div className="uname">   Jack Smith 2 </div>
         </div>
             </div>
      

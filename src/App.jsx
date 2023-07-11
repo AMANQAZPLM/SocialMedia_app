@@ -8,9 +8,10 @@ import {Profile} from "./pages/profile/Profile"
 import "./style.scss";
 import { createBrowserRouter,Route,RouterProvider, Outlet, Navigate } from "react-router-dom";
 function App() {
-const currentUser=true;
+
+  const currentUser=true;
   const Layout =()=>{
-    return <div >
+    return <div style={{}}>
       <NavBar/>
 <div style={{display:"flex"}}>
   <LeftBar/>
