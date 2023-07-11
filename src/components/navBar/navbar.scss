@@ -1,11 +1,13 @@
 .navbar{
     display: flex;
+    position: sticky;
     align-items: center;
     justify-content: space-between;
     padding :10px 20px;
     height: 50px;
     border-bottom: 1px solid lightgray;
-
+top:0;
+background-color: white;
     .left{
         display: flex;
         align-items: center;
