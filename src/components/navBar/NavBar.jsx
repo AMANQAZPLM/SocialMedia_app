@@ -7,20 +7,24 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import {Link} from 'react-router-dom'
-
+import { AuthContext } from "../../context/authContext";
+import { useContext } from "react";
 
  export const NavBar = (props) => {
-  console.log("navbar",props.theme)
+  //console.log("navbar",props.theme)style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}
+  const {currentUser}=useContext(AuthContext);
   return (
-    <div className="navbar" style={props.theme ? {backgroundColor:"#bcbcbc",color:"white"}:{ backgroundColor:"white",color:"black"}}>
+    <div className="navbar" style={props.theme ? {backgroundColor:"#222",color:"white"}:{ backgroundColor:"#f6f6f3",color:"black"}}>
       <div className="left">
-        <Link to="/" style={{textDecoration:"none"}}><span>WeSocial</span>
+        <Link to="/" style={{textDecoration:"none"}}>
+          <span style={props.theme ? {color:"white"}:{ color:"darkblue"}}>WeSocial</span>
         </Link>
         <HomeOutlinedIcon/>
         <GridViewOutlinedIcon/>
-        <div className="search">
+        <div className="search" >
           <SearchOutlinedIcon/>
-          <input type="text" placeholder="Search..."></input>
+      
+         <input type="text" placeholder="Search..." id="srch" style={props.theme ? {backgroundColor:"#222",color:"white"}:{ backgroundColor:"#f6f6f3",color:"black"}}></input> 
         </div>
       </div>
       <div className="right">
@@ -28,8 +32,8 @@ import {Link} from 'react-router-dom'
 <EmailOutlinedIcon/>
 <NotificationsOutlinedIcon/>
 <div className="user">
-  <img src="https://www.pngrepo.com/png/275200/180/man-people.png" alt="Profile image"/>
-  <span>John Baker</span>
+  <img src={currentUser.profilePic} alt="Profile image"/>
+  <span>{currentUser.name}</span>
 </div>
 
       </div>

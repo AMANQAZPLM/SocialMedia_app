@@ -16,9 +16,9 @@ import watch  from "../../assets/watch.png"
 
 export const LeftBar = (props) => {
   return (
-    <div className="leftbar" style={props.theme ? {backgroundColor:"#121212",color:"white"}:{backgroundColor:"white",color:"black"}}>
+    <div className="leftbar" style={props.theme ? {backgroundColor:"black",color:"white"}:{backgroundColor:"white",color:"black"}}>
       <div className="container">
-        <div className="menu">
+        <div className="menu" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
           <div className="username">
           <img src="https://www.pngrepo.com/png/275200/180/man-people.png" width="30px" height="30px"  alt="Profile image"/>
   <span>John Baker</span>
@@ -40,7 +40,7 @@ export const LeftBar = (props) => {
 <span >Memories</span></div>
         </div>
         <hr/>
-        <div className="menu">
+        <div className="menu" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
           <span>Your Shortcuts</span>
           <div className="item">
 <img src={calendar} width="30px" height="30px" />
@@ -59,7 +59,7 @@ export const LeftBar = (props) => {
 <span>Messages</span></div>
         </div>
         <hr/>
-      <div className="menu">
+      <div className="menu" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
 <span>Others</span>
 <div className="item">
 <span style={{borderRadius:"70%"}}> <img src={donate} width="30px" height="30px" /></span>

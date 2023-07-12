@@ -7,8 +7,8 @@ export const RightBar = (props) => {
   return (
     
     <div className="rightbar" style={props.theme ? {backgroundColor:"#121212",color:"white"}:{backgroundColor:"white",color:"black"}}  ><
-      div className="container">
-      <div className="item">
+      div className="container" >
+      <div className="item" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
         <span>Suggestions for You</span>
       <div className="user">
         <div className="userinfo">
@@ -32,21 +32,21 @@ export const RightBar = (props) => {
       </div> 
       </div>
       <hr style={{height:"0.5px", backgroundColor: "#666666",marginBottom:"15px" }}/>
-      <div className="item">
+      <div className="item" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
         <span>Latest Activites</span>
         <div className="user">
         <div className="userinfo">
           <img src={user} alt="image of person"/>
-        <p><span>Jack Smith </span>
+        <p>Jack Smith 
         changed their profile picture.</p>
         </div>
          <span>1 min ago</span>
       </div> 
       </div>
       <hr style={{height:"0.5px", backgroundColor: "#666666" ,marginBottom:"15px" }}/>
-      <div className="item">
+      <div className="item" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
         <span>Online Friends</span>
-        <div className="user">
+        <div className="user" >
         <div className="userinfo">
           <img src={user} alt="image of person"/>
         
