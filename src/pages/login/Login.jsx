@@ -1,9 +1,15 @@
-//import React from 'react'
+import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import "./login.scss"
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 export const Login = () => {
+  const [Theme,setTheme]=useState(true);
   return (
-    <div className='login'>
+    <div className='theme'>
+       <div style={{position:"fixed",top:"0",marginTop:"15px",height:"30px",width:"10px",padding:"5px"}} >
+      <button style={{backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>setTheme(!Theme)} ><Brightness4Icon /></button></div>
+
+    <div className='login' style={Theme ? {backgroundColor:"#666666"}:{ backgroundColor:`rgb(193,190, 255)`}}>
       <div className="card">
         <div className="left">
           <h1>Hello World!</h1>
@@ -22,6 +28,7 @@ export const Login = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   )
 }

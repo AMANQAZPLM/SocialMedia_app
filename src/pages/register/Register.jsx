@@ -1,9 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import  "./register.scss"
 import {Link} from 'react-router-dom'
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 export const  Register = () => {
-  return (<div className='register'>
-  <div className="card">
+  const [Theme,setTheme]=useState(true);
+  return ( <div className="theme" >
+     <div style={{position:"fixed",top:"0",marginTop:"15px",height:"30px",width:"10px",padding:"5px"}} >
+      <button style={{backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>setTheme(!Theme)} ><Brightness4Icon /></button></div>
+
+  <div className='register' style={Theme ? {backgroundColor:"#666666"}:{ backgroundColor:`rgb(193,190, 255)`}}>
+     <div className="card">
     <div className="left">
       <h1>Love Social</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, eum.</p>
@@ -23,6 +29,7 @@ export const  Register = () => {
       </form>
     </div>
   </div>
+</div>
 </div>
 )
 }

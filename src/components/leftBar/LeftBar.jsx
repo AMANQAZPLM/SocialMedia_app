@@ -14,9 +14,9 @@ import video  from "../../assets/video.png"
 import watch  from "../../assets/watch.png"
 
 
-export const LeftBar = () => {
+export const LeftBar = (props) => {
   return (
-    <div className="leftbar">
+    <div className="leftbar" style={props.theme ? {backgroundColor:"#121212",color:"white"}:{backgroundColor:"white",color:"black"}}>
       <div className="container">
         <div className="menu">
           <div className="username">
@@ -24,7 +24,7 @@ export const LeftBar = () => {
   <span>John Baker</span>
           </div>
           <div className="item">
-<img src={friends} width="30px" height="30px" />
+<span style={{backgroundColor:"white",borderRadius:"50%"}}><img src={friends} width="30px" height="30px" /> </span>
 <span>Friends</span></div>
 <div className="item">
 <img src={group} width="30px" height="30px" />
@@ -33,11 +33,11 @@ export const LeftBar = () => {
 <img src={market} width="30px" height="30px" />
 <span>Market Place</span></div>
 <div className="item">
-<img src={watch} width="30px" height="30px" />
+<span style={{backgroundColor:"white",borderRadius:"50%"}}><img src={watch} width="30px" height="30px" /></span>
 <span>Watch</span></div>
 <div className="item">
-<img src={memory} width="30px" height="30px" />
-<span>Memories</span></div>
+<span style={{backgroundColor:"white",borderRadius:"50%"}}><img src={memory} width="30px" height="30px" /> </span>
+<span >Memories</span></div>
         </div>
         <hr/>
         <div className="menu">
@@ -52,7 +52,7 @@ export const LeftBar = () => {
 <img src={gallery} width="30px" height="30px" />
 <span>Gallery</span></div>
 <div className="item">
-<img src={video} width="30px" height="30px" />
+<span style={{backgroundColor:"white",borderRadius:"50%"}}><img src={video} width="30px" height="30px" /></span>
 <span>Videos</span></div>
 <div className="item">
 <img src={comments} width="30px" height="30px" />
@@ -62,13 +62,13 @@ export const LeftBar = () => {
       <div className="menu">
 <span>Others</span>
 <div className="item">
-<img src={donate} width="30px" height="30px" />
+<span style={{borderRadius:"70%"}}> <img src={donate} width="30px" height="30px" /></span>
 <span>Fundraisers</span></div>
 <div className="item">
-<img src={book} width="30px" height="30px" />
+<span style={{borderRadius:"70%"}}><img src={book} width="30px" height="30px" /></span>
 <span>Tutorials</span></div>
 <div className="item">
-<img src={courses} width="30px" height="30px" />
+<span style={{borderRadius:"70%"}}><img src={courses} width="30px" height="30px" /></span>
 <span>Courses</span></div>
 
 

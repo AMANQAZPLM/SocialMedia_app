@@ -2,9 +2,11 @@
 import "./rightbar.scss"
 import user from "../../assets/user.png";
 
-export const RightBar = () => {
+export const RightBar = (props) => {
+  console.log("right",props.theme)
   return (
-    <div className="rightbar"><
+    
+    <div className="rightbar" style={props.theme ? {backgroundColor:"#121212",color:"white"}:{backgroundColor:"white",color:"black"}}  ><
       div className="container">
       <div className="item">
         <span>Suggestions for You</span>
@@ -29,6 +31,7 @@ export const RightBar = () => {
          </div>
       </div> 
       </div>
+      <hr style={{height:"0.5px", backgroundColor: "#666666",marginBottom:"15px" }}/>
       <div className="item">
         <span>Latest Activites</span>
         <div className="user">
@@ -40,6 +43,7 @@ export const RightBar = () => {
          <span>1 min ago</span>
       </div> 
       </div>
+      <hr style={{height:"0.5px", backgroundColor: "#666666" ,marginBottom:"15px" }}/>
       <div className="item">
         <span>Online Friends</span>
         <div className="user">

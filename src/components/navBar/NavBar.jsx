@@ -9,14 +9,14 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import {Link} from 'react-router-dom'
 
 
- export const NavBar = () => {
+ export const NavBar = (props) => {
+  console.log("navbar",props.theme)
   return (
-    <div className="navbar">
+    <div className="navbar" style={props.theme ? {backgroundColor:"#bcbcbc",color:"white"}:{ backgroundColor:"white",color:"black"}}>
       <div className="left">
         <Link to="/" style={{textDecoration:"none"}}><span>WeSocial</span>
         </Link>
         <HomeOutlinedIcon/>
-        <DarkModeOutlinedIcon/>
         <GridViewOutlinedIcon/>
         <div className="search">
           <SearchOutlinedIcon/>

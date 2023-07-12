@@ -1,3 +1,4 @@
+.theme{
 .login{
     height: 100vh;
     background-color: rgb(193,190, 255);
@@ -13,7 +14,7 @@ overflow: hidden;
         min-height: 600px;
         .left{
 
-            background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://media.gettyimages.com/id/509646179/vector/people-jumping.jpg?s=1024x1024&w=gi&k=20&c=xeOO0zX1Xr56rUEQXTTvEuWShrHQSiz722e8d3-Svow=") center;
+            //background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://media.gettyimages.com/id/509646179/vector/people-jumping.jpg?s=1024x1024&w=gi&k=20&c=xeOO0zX1Xr56rUEQXTTvEuWShrHQSiz722e8d3-Svow=") center;
             
             background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://wealthtechtoday.com/wp-content/uploads/2013/03/excited-people-jumping-1024x711.jpg") center;
             background-size: cover;
@@ -68,4 +69,4 @@ overflow: hidden;
             }
         }
     }
-}
+}}
