@@ -1,3 +1,9 @@
 .home{
  padding-left: 10px;
+ padding-top: 20px;
+ overflow-y: scroll;
+ height:90vh;
+ &::-webkit-scrollbar{
+    display: none;
+}
 }

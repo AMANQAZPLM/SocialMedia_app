@@ -1,0 +1,41 @@
+.stories{
+    display: flex;
+    gap: 10px;
+    height: 250px;
+    margin-bottom: 30px;
+    
+    .story{
+        flex :1;
+        border-radius: 10px;
+        overflow :hidden;
+        position: relative;
+       
+        img{
+            width:90%;
+            height : 90%;
+            object-fit: cover;
+ border: 3px solid blue ;
+ border-radius: 25px;
+        }
+        span{ position: absolute;
+        color: black;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+left: 10px;
+font-weight: bold;}
+button{
+    position:absolute;
+    bottom:30px;
+    background-color: dodgerblue;
+    color: white;
+    left: 15px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+
+}
+    }
+}

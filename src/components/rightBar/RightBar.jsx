@@ -3,10 +3,10 @@ import "./rightbar.scss"
 import user from "../../assets/user.png";
 
 export const RightBar = (props) => {
-  console.log("right",props.theme)
+  //console.log("right",props.theme)
   return (
     
-    <div className="rightbar" style={props.theme ? {backgroundColor:"#121212",color:"white"}:{backgroundColor:"white",color:"black"}}  ><
+    <div className="rightbar" style={props.theme ? {backgroundColor:"black",color:"white"}:{backgroundColor:"white",color:"black"}}  ><
       div className="container" >
       <div className="item" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
         <span>Suggestions for You</span>

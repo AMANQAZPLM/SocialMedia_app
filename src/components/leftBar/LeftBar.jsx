@@ -12,16 +12,17 @@ import market  from "../../assets/market.png"
 import memory  from "../../assets/memory.png"
 import video  from "../../assets/video.png"
 import watch  from "../../assets/watch.png"
-
-
+import { AuthContext } from "../../context/authContext" 
+import { useContext } from "react"
 export const LeftBar = (props) => {
+  const {currentUser}=useContext(AuthContext);
   return (
     <div className="leftbar" style={props.theme ? {backgroundColor:"black",color:"white"}:{backgroundColor:"white",color:"black"}}>
       <div className="container">
         <div className="menu" style={props.theme ?{backgroundColor:"#222" }:{backgroundColor:"#f6f6f3"}}>
           <div className="username">
-          <img src="https://www.pngrepo.com/png/275200/180/man-people.png" width="30px" height="30px"  alt="Profile image"/>
-  <span>John Baker</span>
+          <img src={currentUser.profilePic} width="30px" height="30px"  alt="Profile image"/>
+  <span>{currentUser.name}</span>
           </div>
           <div className="item">
 <span style={{backgroundColor:"white",borderRadius:"50%"}}><img src={friends} width="30px" height="30px" /> </span>
