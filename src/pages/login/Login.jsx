@@ -3,6 +3,8 @@ import {Link, useLocation} from 'react-router-dom'
 import "./login.scss"
 import { AuthContext } from '../../context/authContext';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 export const Login = (props) => {
   let location=useLocation();
  // console.log(location.state?.theme)
@@ -17,8 +19,9 @@ export const Login = (props) => {
   };
   return (
     <div className='theme'>
-       <div style={{position:"fixed",top:"0",marginTop:"15px",height:"30px",width:"10px",padding:"5px"}} >
-      <button style={{backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>setTheme(!Theme)} ><Brightness4Icon /></button></div>
+       <div style={{position:"fixed",top:"0",left:"97%",marginTop:"15px",height:"30px",width:"10px",padding:"5px"}} >
+      <button style={{backgroundColor:"transparent",border:"none",cursor:"pointer"}} onClick={()=>setTheme(!Theme)} >
+      {Theme ?<LightModeIcon style={{color:"white"}}/> : <DarkModeIcon/>}</button></div>
 
     <div className='login' style={Theme ? {backgroundColor:"#666666"}:{ backgroundColor:`rgb(193,190, 255)`}}>
       <div className="card">

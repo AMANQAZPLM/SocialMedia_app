@@ -11,24 +11,26 @@ import "./style.scss";
 import { AuthContext } from "./context/authContext"
 import { useContext, useState } from "react"
 import { createBrowserRouter,Route,RouterProvider, Outlet, Navigate } from "react-router-dom";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Height } from "@mui/icons-material"
 import ThemeContext from "./context/themeContext"
+import LightModeIcon from '@mui/icons-material/LightMode';
 import React from "react"
 function App() {
   const [Theme,setTheme]=useState(true);
   const {currentUser}=useContext(AuthContext);
   //const them=useSelector(theme=>theme);import { useSelector,useDispatch } from "react-redux";dispatchEvent(CHANGE(Theme));
   //console.log(them);
+////<div style={{position:"absolute",top:"0",left:"100",marginTop:"15px",height:"30px",width:"10px",padding:"5px"}} >  //</div> 
   
   const Layout =()=>{
     return <div style={Theme ? {backgroundColor:"black",color:"white"}:{ backgroundColor:"#f6f6f3",color:"black"}}>
-
-<NavBar theme={Theme}/> <div style={{position:"fixed",top:"0",marginTop:"15px",height:"30px",width:"10px",padding:"5px",}} >
-  <button style={{borderRadius:"15px",backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>{setTheme(!Theme);
-  //console.log(Theme);
-  
-  }} ><Brightness4Icon /></button></div>
-   
+<div >
+<NavBar theme={Theme}/> 
+  <button style={{position:"absolute",top:"20px",left:"97vw",border:"none", cursor:"pointer",backgroundColor:"transparent"}} onClick={()=>{setTheme(!Theme);
+  }} > {Theme ? <LightModeIcon style={{color:"white"}}/>  :<DarkModeIcon   />}</button>
+ 
+</div>
 <div style={{display:"flex"}}>
   <LeftBar theme={Theme}/>
   <div style={{flex:6}}>
