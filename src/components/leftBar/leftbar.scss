@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .leftbar{
 flex: 2;
 position: sticky;
@@ -7,7 +9,11 @@ overflow: scroll;
 &::-webkit-scrollbar{
     display: none;
 }
-    .container{
+@include mobile
+{
+    display: none;
+}
+.container{
         padding: 20px;
         hr{
             margin: 20px 0px;
