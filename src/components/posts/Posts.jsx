@@ -1,6 +1,7 @@
 import "./posts.scss"
 import Post  from "../post/Post";
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeContext from "../../context/themeContext";
 const Posts = (props) => {
     const tempost=[  {
     id: 1,
@@ -23,11 +24,11 @@ desc :"If Anyone is planing to watch either Oppenheimer or Barbie in upcoming we
     name:"Steven" ,
     prourl : "http://www.clipartbest.com/cliparts/9cR/LL5/9cRLL5p7i.jpg",
 imgurl :"https://clipground.com/images/argentina-clipart-football-5.jpg",
-desc : "Recently I travelled to Argentina , and fortune enough to meet Lionel Messi at club football "
+desc : "Recently I travelled to Argentina , and was fortune enough to meet Lionel Messi during club football "
 }, 
 ];
-
-return <div className="posts"  style={props.theme ? {backgroundColor:"black",color:"white"}:{backgroundColor:"white",color:"black"}}>
+const theme=useContext(ThemeContext);
+return <div className="posts"  style={props.theme || theme ? {backgroundColor:"black",color:"white"}:{backgroundColor:"white",color:"black"}}>
       { 
       tempost.map(post=>(  
         <Post post={post} theme={props.theme} key={post.id}/>

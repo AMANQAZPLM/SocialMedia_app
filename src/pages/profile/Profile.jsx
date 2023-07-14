@@ -11,29 +11,32 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts"
 import "./profile.scss"
 import { useLocation } from 'react-router-dom';
+import ThemeContext from "../../context/themeContext";
 export const Profile = () => {
-  return (
-    <div className='profile'  >
+  const b= React.useContext(ThemeContext);
+  //console.log("b",b);
+    return (
+    <div className='profile'   >
       <div className="images">
         <img src="https://th.bing.com/th/id/OIP.bJrzQNfLwxFUFiQM4E0EQwHaEK?pid=ImgDet&rs=1" alt="" className='coverPic'/>
         <img src="https://th.bing.com/th/id/OIP.CEUVTFPpQtg_5H4ReQhIigHaE7?pid=ImgDet&rs=1" alt="" className='profilePic'/>
       </div>
-    <div className="profileContainer">
-      <div className="userproinfo">
+    <div className="profileContainer" >
+      <div className="userproinfo" style={b ? {backgroundColor:"#222",color:"white"}:{ backgroundColor:"#f6f6f3",color:"black"}}>
         <div className="left">
         <a href="http://facebook.com">
               <FacebookTwoToneIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="http://instagram.com">
               <InstagramIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="http://twitter.com">
               <TwitterIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="http://linkedin.com">
               <LinkedInIcon fontSize="large" />
             </a>
-            <a href="http://facebook.com">
+            <a href="http://pinterest.com">
               <PinterestIcon fontSize="large" />
             </a>
         </div>

@@ -12,14 +12,22 @@ import { AuthContext } from "./context/authContext"
 import { useContext, useState } from "react"
 import { createBrowserRouter,Route,RouterProvider, Outlet, Navigate } from "react-router-dom";
 import { Height } from "@mui/icons-material"
+import ThemeContext from "./context/themeContext"
+import React from "react"
 function App() {
   const [Theme,setTheme]=useState(true);
   const {currentUser}=useContext(AuthContext);
+  //const them=useSelector(theme=>theme);import { useSelector,useDispatch } from "react-redux";dispatchEvent(CHANGE(Theme));
+  //console.log(them);
+  
   const Layout =()=>{
     return <div style={Theme ? {backgroundColor:"black",color:"white"}:{ backgroundColor:"#f6f6f3",color:"black"}}>
 
 <NavBar theme={Theme}/> <div style={{position:"fixed",top:"0",marginTop:"15px",height:"30px",width:"10px",padding:"5px",}} >
-  <button style={{borderRadius:"15px",backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>setTheme(!Theme)} ><Brightness4Icon /></button></div>
+  <button style={{borderRadius:"15px",backgroundColor:"white",border:"none",cursor:"pointer"}} onClick={()=>{setTheme(!Theme);
+  //console.log(Theme);
+  
+  }} ><Brightness4Icon /></button></div>
    
 <div style={{display:"flex"}}>
   <LeftBar theme={Theme}/>
@@ -61,8 +69,9 @@ element: <Login/> ,
       }
 
 ]);
-  return  <>
- <RouterProvider router={router}/>  </>
+  return  <ThemeContext.Provider value={Theme}>
+
+ <RouterProvider router={router}/>  </ThemeContext.Provider>
 }
 
 export default App;

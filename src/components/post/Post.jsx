@@ -6,14 +6,15 @@ import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import {Link} from "react-router-dom"
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Comments } from "../comments/Comments";
-
+import ThemeContext from "../../context/themeContext"
 const Post = (post) => {
     const [comemntOpen,setcommentOpen]=useState(false);
     const Liked= false;
-    
-return (<div className="post" style={post.theme ? {backgroundColor:"#222",color:"white"}:{backgroundColor:"#f6f6f3",color:"black"}}>
+
+    const theme=useContext(ThemeContext);
+return (<div className="post" style={post.theme || theme ? {backgroundColor:"#222",color:"white"}:{backgroundColor:"#f6f6f3",color:"black"}}>
     <div className="container">
     <div className="user">
         <div className="userinfo">
@@ -21,6 +22,7 @@ return (<div className="post" style={post.theme ? {backgroundColor:"#222",color:
             <div className="details">
                 <Link to = {`/profile/${post.post.userid}`}  style={{textDecoration:"none"}}> 
                 <span className="name" >{post.post.name}</span></Link>
+                
                 <span className="date">1 min ago</span>
             </div>
         </div>
