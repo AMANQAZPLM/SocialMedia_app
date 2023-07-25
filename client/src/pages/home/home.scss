@@ -1,0 +1,22 @@
+@import "../../style.scss";
+.home{
+ padding-left: 10px;
+ padding-top: 20px;
+ overflow-y: scroll;
+ height:90vh;
+ &::-webkit-scrollbar{
+    display: none;
+}
+@themify()
+{
+@include mobile
+{
+    padding :10px;
+}
+@include tablet
+{
+ padding :20px;
+}
+
+}
+}

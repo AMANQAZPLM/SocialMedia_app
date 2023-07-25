@@ -1,0 +1,130 @@
+@import "../../style.scss";
+.theme{
+.register{
+    height: 100vh;
+    background-color: rgb(193,190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card { display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+        width: 50%;
+        border-radius: 10px;
+        background-color: white;
+        min-height: 600px;
+        @include tablet
+        { border-radius: 2px;
+            height: 70vh;
+            min-height: 0px;
+            margin : auto;
+        }        
+        @include mobile
+        { border-radius: 2px;
+            height: 70vh;
+            min-height: 0px;
+            margin : auto;
+        width: 90vw;
+        }
+
+        .left{
+
+            background: linear-gradient(rgba(39,11,96,0.5),rgba(39,11,96,0.5)), url("https://c.pxhere.com/photos/cd/ca/person_hiker_peak_summit_top_adventure_sunrise_lifestyle-680931.jpg!d") center;
+            background-size: cover;
+            padding: 50px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            @include mobile
+            {   
+            padding: 10px;
+            gap : 5px;
+            } 
+
+            h1{
+                font-size: 100px;
+                line-height: 100px;
+                @include tablet
+                {
+                 font-size: 30px;
+                 line-height: 30px;
+                 text-align: center;
+                }
+                @include mobile
+                {
+                 font-size: 30px;
+                 line-height: 30px;
+                 text-align: center;
+                }
+            
+            }
+            p{}
+            span{ font-size: 14px;}
+            button{
+                width: 50%;
+                padding: 10px;
+                border: none;
+                border-color: white;
+                color: rebeccapurple;
+                font-weight: bold;
+                cursor: pointer;
+                @include mobile
+                { margin-top: 20px;}
+            }
+        }
+        .right{ flex: 1;
+            padding: 50px;
+            gap: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile
+            { gap:10px;
+            padding: 10px;}
+
+            h1{color:#555;}
+            form{ display: flex;
+                flex-direction: column;
+                gap: 30px;
+                @include mobile
+                {gap :5px;}
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+
+                    @include tablet
+                    {
+                     padding : 5px 10px ;                    }
+                
+                     @include mobile
+                     {
+                      padding : 5px 10px ;                    }         
+                }
+                
+                button{
+                    width: 50%;
+                    padding:10px;
+                    border: none;
+                    background-color: #938eef;
+                    color: white;
+                    font-weight: bold;  
+                    cursor: pointer;
+                    @include tablet
+               {
+                background-color: dodgerblue;
+               }
+               @include mobile
+               { margin-top: 30px;
+                padding: auto;
+               }
+
+                }
+            }
+        }
+    }
+}}
